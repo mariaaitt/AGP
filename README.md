@@ -1,6 +1,6 @@
 # AGP Project
-> Current Branch: lin-exp  
-> Developer : Jianke LIN  
+> Current Branch: master 
+> Developer : Anonymous 
 ## Status: Basic Env Branch: Ready...
 
 ## The preparation pharse
