@@ -1,5 +1,5 @@
 # Standard Operating Procedure of AGP Ver 1.0
-> Doc Auth: 林建克 Jianke LIN | CY Cergy Paris University M1 RS S1
+> Doc Auth: 林建克 Jianke LIN &ensp;|&ensp; CY Cergy Paris University M1 RS S1
 > Ref: NULL 
 
 
@@ -10,7 +10,6 @@
 > 3. possible impacts to the system, including but not limited to the following, if any, communicate in a timely manner, and focus on server performance in full volume
 > 4. Migration of servers to availability zones, it is recommended to create VMs with the same name in the new resource group, after the environment is stabilized, delete the old resources and move the new resources to the original resource group
 
-Translated with www.DeepL.com/Translator (free version)
 
 > [!IMPORTANT]
 > Always be aware of the current path and have a rollback plan in place
@@ -46,6 +45,7 @@ git branch -r // show all the branch local
 git checkout -b master // create master branch for project  
 git push origin master // push to repo remote
 git branch --set-upstream-to=origin/master master // set up tracking relationships  
+git branch -f lin-exp master // overwrite lin branch with master branch
 
 
 

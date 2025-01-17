@@ -1,6 +1,6 @@
 # AGP Project
 > Current Branch: master   
-> Developer : Anonymous 
+> Developer : Anonymous  
 ## Status: Basic Env Branch: Ready...
 
 ## The preparation pharse
