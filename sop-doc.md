@@ -35,13 +35,25 @@ git add .  // add all the file in current path
 git commit -m "Add sop-doc.md with initial content"  
 
 
-- status and local branch trace related commands  
-git branch --unset-upstream // 不需要当前分支与远程仓库同步，取消当前分支的远程跟踪
+- Operations relate to Branch
+git branch -r | git remote show origin // show all the branch remote  
+// git remote show origin will give more infos about relation status and other info  
+git pull origin main // if in remote repo, there exits repo inexits local, pull to local and make synchronnization  
+git fetch --prune // update to remote repo
+git branch --unset-upstream // 不需要当前分支与远程仓库同步，取消当前分支的远程跟踪  
+git branch -d main // delete specific branch   
+git branch -r // show all the branch local  
+git checkout -b master // create master branch for project  
+git push origin master // push to repo remote
+git branch --set-upstream-to=origin/master master // set up tracking relationships  
+
+
 
 
 - specific upload and update
 git add sop-doc.md
-git commit -m "Update SOP content with specific changes"
+git commit -m "Standard Operating Procedure"
+git push
 
 
 
