@@ -34,3 +34,14 @@ begin your dev process
 git add .  // add all the file in current path  
 git commit -m "Add sop-doc.md with initial content"  
 
+
+- status and local branch trace related commands  
+git branch --unset-upstream // 不需要当前分支与远程仓库同步，取消当前分支的远程跟踪
+
+
+- specific upload and update
+git add sop-doc.md
+git commit -m "Update SOP content with specific changes"
+
+
+
