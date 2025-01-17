@@ -10,7 +10,6 @@
 > 3. possible impacts to the system, including but not limited to the following, if any, communicate in a timely manner, and focus on server performance in full volume
 > 4. Migration of servers to availability zones, it is recommended to create VMs with the same name in the new resource group, after the environment is stabilized, delete the old resources and move the new resources to the original resource group
 
-Translated with www.DeepL.com/Translator (free version)
 
 > [!IMPORTANT]
 > Always be aware of the current path and have a rollback plan in place
