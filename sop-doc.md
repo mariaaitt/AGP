@@ -3,15 +3,17 @@
 > Ref: NULL 
 
 
-> [!NOTE] 注意
+> [!NOTE] Attention
 >
-> 1. 部署动作仅允许执行在下述**部署过程**中明确标注的，一切额外操作均需通过与文档简历者沟通后方可执行；若影响方案继续执行则进行回滚操作，并约定重新指定 Checklist、重新评审、重新实施。
-> 2. 部署结束后，立即完成部署交付件归档，包含不限于：checklist、验收 Case、验收结论
-> 3. 可能对系统的影响，包括不局限于以下几种，如有，及时沟通，并在全量中关注服务器的性能
-> 4. 服务器迁移至可用性区域，建议创建同名 VM 在新的资源组中，在环境稳定后，删除老资源，并将新的资源移动至原有资源组
+> 1. Deployment actions are only allowed to be performed if they are clearly labeled in the **Deployment Process** below, and any additional actions must be communicated to the document reseller before they are performed; if they affect the continued execution of the solution, then they will be rolled back and agreed to re-specify the checklist, reevaluate, and re-execute.
+> 2. immediately after deployment, archive deployment deliverables, including but not limited to: checklists, acceptance cases, and acceptance conclusions.
+> 3. possible impacts to the system, including but not limited to the following, if any, communicate in a timely manner, and focus on server performance in full volume
+> 4. Migration of servers to availability zones, it is recommended to create VMs with the same name in the new resource group, after the environment is stabilized, delete the old resources and move the new resources to the original resource group
+
+Translated with www.DeepL.com/Translator (free version)
 
 > [!IMPORTANT]
-> 时刻注意当前路径，并备好回滚方案
+> Always be aware of the current path and have a rollback plan in place
 >
 
 - initialization   
@@ -28,3 +30,7 @@ git status
 
 - create initial file  
 echo "# Standard Operating Procedure" > sop-doc.md
+begin your dev process  
+git add .  // add all the file in current path  
+git commit -m "Add sop-doc.md with initial content"  
+
