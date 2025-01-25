@@ -1,0 +1,45 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="
+           http://xmlns.jcp.org/xml/ns/javaee
+           http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- Spring 根应用上下文: 加载applicationContext.xml + DataSourceConfig等 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            /WEB-INF/applicationContext.xml
+            <!-- 若需要JavaConfig可以添加：
+                 classpath:com.traveloffersystem.config.DataSourceConfig
+                 classpath:com.traveloffersystem.config.AppConfig
+                 classpath:com.traveloffersystem.config.WebConfig
+            -->
+        </param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!-- Spring MVC DispatcherServlet -->
+    <servlet>
+        <servlet-name>springDispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value></param-value>
+            <!-- 留空则默认去找 [servlet-name]-servlet.xml 或使用注解WebConfig -->
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>springDispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+</web-app>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Enable annotation scanning for automatic discovery of @Component, @Service, @Repository, @Controller -->
+    <context:component-scan base-package="com.traveloffersystem" />
+
+    <!-- 数据源、JDBC 配置，若需要 XML 配置可在此声明
+         或者你可以在 Java 类 DataSourceConfig 中配置并加 @Bean
+    -->
+
+    <!-- 使用 org.springframework.jdbc.datasource.DriverManagerDataSource (demo by Jianke test)) -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver" />
+        <property name="url" value="jdbc:postgresql://45.149.207.13:5432/agp?characterEncoding=UTF-8&amp;connectTimeout=30" />
+        <property name="username" value="lin" />
+        <property name="password" value="lin830" />
+    </bean>
+
+    <!-- 如果要使用 JdbcTemplate -->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+</beans>

@@ -1,0 +1,9 @@
+com\traveloffersystem\controller\LuceneController.class
+com\traveloffersystem\controller\QueryController.class
+com\traveloffersystem\config\AppConfig.class
+com\traveloffersystem\model\Site.class
+com\traveloffersystem\controller\DefaultController.class
+com\traveloffersystem\repository\BDe.class
+com\traveloffersystem\dao\SiteDaoImpl.class
+com\traveloffersystem\config\WebConfig.class
+com\traveloffersystem\dao\SiteDao.class
